@@ -1,0 +1,100 @@
+{
+  "expo": {
+    "name": "Tourist Safety App",
+    "slug": "tourist-safety-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366F1"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.touristsafety.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs location access to provide safety alerts and emergency services based on your current location.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs location access to provide safety alerts and emergency services based on your current location.",
+        "NSMicrophoneUsageDescription": "This app needs microphone access for voice commands and emergency communication features.",
+        "NSSpeechRecognitionUsageDescription": "This app uses speech recognition to help you communicate with the AI assistant using voice commands.",
+        "NSCameraUsageDescription": "This app needs camera access to take photos for profile pictures and incident reporting.",
+        "NSPhotoLibraryUsageDescription": "This app needs photo library access to select images for your profile and incident reports.",
+        "NSContactsUsageDescription": "This app needs contacts access to help you set up emergency contacts for safety features.",
+        "NSCalendarsUsageDescription": "This app needs calendar access to help you plan safe travel itineraries.",
+        "NSRemindersUsageDescription": "This app needs reminders access to set up safety check-ins and travel reminders."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6366F1"
+      },
+      "package": "com.touristsafety.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_CONTACTS",
+        "CALL_PHONE",
+        "SEND_SMS",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED",
+        "FOREGROUND_SERVICE",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-location",
+      "expo-speech",
+      "expo-haptics",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Tourist Safety App to access your camera to take photos for profile pictures and incident reporting."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Tourist Safety App to access your photo library to select images for your profile and incident reports.",
+          "savePhotosPermission": "Allow Tourist Safety App to save photos to your device for backup and sharing purposes."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow Tourist Safety App to access your contacts to help set up emergency contacts for safety features."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#6366F1",
+          "sounds": ["./assets/notification-sound.wav"]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "eas": {
+        "projectId": "tourist-safety-app-uuid"
+      }
+    }
+  }
+}
