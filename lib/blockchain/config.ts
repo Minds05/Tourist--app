@@ -31,7 +31,7 @@ export const BLOCKCHAIN_CONFIG = {
     ENV: "staging" as const,
     API_URL: "https://backend-staging.push.org/apis",
   },
-} as const
+} as const;
 
 export const SUPPORTED_CHAINS = [
   {
@@ -42,7 +42,7 @@ export const SUPPORTED_CHAINS = [
       symbol: "ETH",
       decimals: 18,
     },
-    rpcUrls: ["https://sepolia.infura.io/v3/YOUR_INFURA_KEY"],
+    rpcUrls: [process.env.NEXT_PUBLIC_RPC_URL || "https://sepolia.infura.io/v3/YOUR_INFURA_KEY"],
     blockExplorerUrls: ["https://sepolia.etherscan.io/"],
   },
-]
+];

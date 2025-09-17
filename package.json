@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "node server/index.js",
-    "server:dev": "nodemon server/index.js",
+    "server": "ts-node server/index.ts",
+    "server:dev": "nodemon server/index.ts",
+    "build:server": "tsc --project tsconfig.server.json",
+    "start:server": "node dist/server/index.js",
     "deploy:contracts": "hardhat run scripts/deploy-all-contracts.js --network sepolia"
   },
   "dependencies": {
